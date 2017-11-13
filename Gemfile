@@ -19,6 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 #Breadcrumbs
 gem "gretel"
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 #Front end sources
 source 'https://rails-assets.org' do
