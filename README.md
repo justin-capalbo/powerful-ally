@@ -1,24 +1,26 @@
-# README
+## Overview
+He would be a powerful ally, another dark jedi.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Dependencies
+* ruby 2.4
+* postgres 9
 
-Things you may want to cover:
+## Installation
+### Ruby
+Suggested ruby setup `ruby-install` + `ch-ruby`
 
-* Ruby version
 
-* System dependencies
+## Setup
+### Postgres
+Provision your sql database as usual with 
 
-* Configuration
+`rake db:create`
 
-* Database creation
+`rake db:schema:load`
 
-* Database initialization
+## Running
+Start rails server `rails s`
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Testing
+Run tests
+`rspec`
