@@ -1,0 +1,30 @@
+<header class="navbar navbar-inverse">
+  <div class="container">
+    <nav>
+      <ul class="nav navbar-nav navbar-left">
+        <li><%= link_to 'Powerful Ally', root_path, class: 'navbar-brand' %></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if officer_signed_in? %>
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <%= current_officer.email %>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li><%= link_to 'Profile', edit_officer_registration_path %></li>
+              <li><%= link_to 'New guild', new_guilds_path %></li>
+              <li><%= link_to 'My guilds', guilds_path %></li>
+              <li class="divider" />
+              <li><%= link_to 'Log out', destroy_officer_session_path, method: :delete %></li>
+            </ul>
+          </li>
+        <% else %>
+          <li><%= link_to 'Log In', new_officer_session_path %></li>
+          <li><%= link_to 'Sign Up', new_officer_registration_path %></li>
+        <% end %>
+      </ul>
+    </nav>
+  </div>
+</header>
+
