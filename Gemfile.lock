@@ -214,6 +214,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
+  bundler (>= 1.8.4)
   devise
   factory_bot_rails
   faker
