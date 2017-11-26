@@ -12,8 +12,9 @@
  *
  *
  * //bootstrap
- *= require boostrap
+ *=require_self
+ *=require bootstrap
 
  * //sass
- *= require main.scss
+ *=require main.scss
  */
