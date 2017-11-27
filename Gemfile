@@ -39,6 +39,8 @@ group :development, :test do
   gem 'listen'
   #rspec
   gem 'rspec-rails'
+  #shoulda-matchers
+  gem 'shoulda-matchers'
   #factorybot
   gem 'factory_bot_rails'
   #faker
