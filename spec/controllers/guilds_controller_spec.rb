@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe GuildsController, type: :controller do
+  login_officer
 
   # This should return the minimal set of attributes required to create a valid
   # Guild. As you add validations to Guild, be sure to

@@ -9,6 +9,7 @@ require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 
 require_relative 'support/factory_bot'
+require_relative 'support/controller_macros'
 require 'devise'
 
 # Requires supporting ruby files with custom matchers and macros, etc, in
@@ -55,7 +56,8 @@ RSpec.configure do |config|
   config.infer_spec_type_from_file_location!
 
   # Include ControllerHelpers from Devise in all :controller specs
-  config.include Devise::Test::ControllerHelpers, :type => :controller
+  config.extend ControllerMacros, type: :controller
+  config.include Devise::Test::ControllerHelpers, type: :controller
 
   # Filter lines from Rails gems in backtraces.
   config.filter_rails_from_backtrace!
