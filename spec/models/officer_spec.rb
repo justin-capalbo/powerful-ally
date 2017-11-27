@@ -1,13 +1,9 @@
-require 'rails_helper'
+require 'spec_helper'
 
 RSpec.describe Officer, type: :model do
-
-  describe 'initialization' do
-    it 'initializes a new officer' do
-      # this is a dumb test but i wanted to have at least one test that runs
-      officer = Officer.new
-
-      expect(officer).to_not be_nil
-    end
+  
+  it "has a valid factory" do
+    expect(build(:officer)).to be_valid
   end
+
 end
