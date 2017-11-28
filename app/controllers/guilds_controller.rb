@@ -22,7 +22,7 @@ class GuildsController < ApplicationController
 
   # POST /guilds
   def create
-    @guild = Guild.new(guild_params)
+    @guild = current_officer.guilds.build(guild_params)
 
     if @guild.save
       redirect_to @guild, notice: 'Guild was successfully created.'
@@ -54,6 +54,6 @@ class GuildsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def guild_params
-      params.fetch(:guild, {})
+      params.require(:guild).permit(:name)
     end
 end
