@@ -39,6 +39,8 @@ group :development, :test do
   gem 'listen'
   #rspec
   gem 'rspec-rails'
+  #database cleaner
+  gem 'database_cleaner'
   #shoulda-matchers
   gem 'shoulda-matchers'
   #factorybot

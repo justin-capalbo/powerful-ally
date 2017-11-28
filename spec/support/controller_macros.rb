@@ -1,9 +1,9 @@
 module ControllerMacros
-  def login_officer(current_officer = FactoryBot.create(:officer))
+  def login_officer
     before :each do
       @request.env['devise.mapping'] = Devise.mappings[:officer]
-      @current_officer = current_officer
-      sign_in :officer, @current_officer
+      @current_officer = FactoryBot.create(:officer)
+      sign_in @current_officer, scope: :officer
     end
   end
 end
