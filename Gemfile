@@ -39,6 +39,8 @@ group :development, :test do
   gem 'listen'
   #rspec
   gem 'rspec-rails'
+  #required for certain methods in controller tests
+  gem 'rails-controller-testing'
   #database cleaner
   gem 'database_cleaner'
   #shoulda-matchers
